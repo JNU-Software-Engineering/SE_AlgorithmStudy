@@ -1,0 +1,4 @@
+{
+    "javascript.format.placeOpenBraceOnNewLineForFunctions": false,
+    "typescript.format.placeOpenBraceOnNewLineForFunctions": false
+}
