@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-long long combination(int k, int n)
+long long combination(int k, int n) //동적계획법
 {
 	long long c[30][30] = { 0, };
 
