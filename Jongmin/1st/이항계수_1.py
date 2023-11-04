@@ -1,9 +1,4 @@
-def factorial(N):
-    if N==1:
-        return 1
-    elif N==0:
-        return 1
-    return N*factorial(N-1)
+from math import factorial
 
 N,K = map(int, input().split())
 
