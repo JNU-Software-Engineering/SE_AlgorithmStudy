@@ -6,7 +6,7 @@ long long combination(int k, int n) //동적계획법
 
 	for (int i = 0; i <= k; ++i)
 	{
-		for (int j = 0; j <= min(n, i); ++j)
+		for (int j = 0; j <= i; ++j)
 		{
 			if (i == j || j == 0)
 				c[i][j] = 1;
