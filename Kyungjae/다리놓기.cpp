@@ -1,20 +1,14 @@
 #include <iostream>
 using namespace std;
-long long combination(int k, int n) //동적계획법
+int d[31][31];
+int combination(int k, int n)
 {
-	long long c[30][30] = { 0, };
-
-	for (int i = 0; i <= k; ++i)
+	if (d[k][n] != 0) return d[k][n];
+	if (n == 0 || n == k)
 	{
-		for (int j = 0; j <= i; ++j)
-		{
-			if (i == j || j == 0)
-				c[i][j] = 1;
-			else
-				c[i][j] = c[i - 1][j] + c[i - 1][j - 1];
-		}
+		return d[k][n] = 1;
 	}
-	return c[k][n];
+	return d[k][n] = combination(k - 1, n - 1) + combination(k - 1, n);
 }
 
 int main()
@@ -25,7 +19,7 @@ int main()
 	while (m--)
 	{
 		cin >> n >> k;
-		cout << combination(k, n) << '\n';
+		cout << combination(k, n);
 
 	}
 }
